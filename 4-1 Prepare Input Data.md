@@ -94,7 +94,7 @@ Gain flip | `No flipping (0)`
 Defect file | *Leave empty*
 Use RELION's own implementation? | `Yes`
 
-You do not need to install the MotionCorr to complete this tutorial, because RELION has an inner implementation of the same algorithm. Set "Use RELION's own implementation?" field to `Yes` to enable it. Note that **RELIONS's inner implementation of MotionCorr works on CPU only.**
+You do not need to install the MotionCorr to complete this tutorial, because RELION has an inner implementation of the same algorithm. Set "Use RELION's own implementation?" field to `Yes` to enable it. Note that **RELION's inner implementation of MotionCorr works on CPU only.**
 
 Job produces two files:
 
@@ -118,7 +118,7 @@ MotionCorr/job002/Movies/20170629_00022_frameImage.mrc MotionCorr/job002/Movies/
 ...
 ```
 
-**Links**
+**References**
 
 1. [Cryo-tomography tilt-series alignment with consideration of the beam-induced sample motion]
 2. [MotionCor2 - anisotropic correction of beam-induced motion for improved cryo-electron microscopy]
@@ -138,16 +138,15 @@ Next Steps | (4) ManualPick/illustrate_only
 　 | (20) Extract/best3dclass_bigbox
 
 
-If you are looking on a micrograph image using the image viewer application you're probably can't see anything on it, even with max zooming. It is because of the wave nature of electronic microscopy. Usually, to get a magnified image of some sample:
+If you are looking on a micrograph image using the image viewer application you're probably can't see anything on it, even with max zooming. It is because of the wave nature of electronic microscopy. Usually, a magnified image of some sample colud be taken by the following way.
 
-* microscope emits electron waves against the sample,
-* the electron wave going through the sample,
-* and through the lens,
-* and become "printed" on the image plane.
+1. The microscope emits electron waves against the sample.
+2. The electron wave will be going through the sample and lens,
+3. Finally, it will become "printed" on the image plane.
 
 ![images/figure_electron_microscopy.png](images/figure_electron_microscopy.png)
 
-But after a single electron passes the sample, some parts of electron wave scattering in different directions (yellow line on the figure above). And, when scattered waves "touches" the lens, it will be "redirected" back to the original wave's point on image pane. So, the resulting image represented as the sum of the original electron wave and all scattered waves.
+But after a single electron passes the sample, some parts of electron wave scattering in different directions (yellow line on the figure above). And, when scattered waves "touches" the lens, it will be "redirected" back to the original wave's point on image plane. So, the resulting image represented as the sum of the original electron wave and all scattered waves.
 
 Such kind of scattering significantly blurs the resulting image. That's why we need some way to filter "good" data pieces on a micrograph from "bad" ones, in other words - understand a measure of image defocus, and that what "Contrast transfer function" (or CTF) can help us with.
 
@@ -189,7 +188,7 @@ Select the `micrographs_ctf.star` file in the display tab and you can see the es
 
 Here CTF visualized as a power spectrum, where you can see so-called "Thon rings." Bright rings points on a visible part of the spectrum (positive or negative) defined by CTF, dark rings points on invisible ones. The blue graph shows how Thon rings correlate with CTF function.
 
-**Links**
+**References**
 
 1. [Contrast Transfer Function - Scherzer Defocus]
 2. [Contrast transfer function (CTF) correction]

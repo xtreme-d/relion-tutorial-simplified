@@ -64,7 +64,7 @@ Let's check the results in the Chimera app.
 
 The model looks more detailed now.
 
-**Links**
+**References**
 
 * [Fourier Shell correlation - IMOD / PEET Workshop at RML, June 2017]
 
@@ -136,7 +136,7 @@ Also, it's essential to check the `logfile.pdf` file in the display field of the
 
 ![images/relion_fsc_curve.png](images/relion_fsc_curve.png)
 
-**Links**
+**References**
 
 * [High-resolution noise substitution to measure overfitting and validate resolution in 3D structure determination by single particle electron cryomicroscopy.]
 

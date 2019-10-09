@@ -20,7 +20,7 @@ Previous Steps | *(5) Select/5mics*
 Step Alias | **(10) AutoPick/optimise_params**
 Next Step | ~ (11) AutoPick/template_based
 
-First, we have to optimize picking parameters. The problem is that it would take significant time, but there is a trick. The most expensive part of calculations in the auto-picking jobs is the calculating of the probability-based figure-of-merit (FOM) maps. It represents the cross-correlation coefficient between each template particle image and all selected positions in the micrographs. We can make computations faster if we write FOM on disk and read it on next iterations. You can control FOM related behavior of RELION by using "Write FOM maps?" and "Read FOM maps?" fields.
+First, we have to optimize picking parameters. The problem is that it would take significant time, but there is a trick. The most expensive part of calculations in the auto-picking jobs is the calculation of the probability-based figure-of-merit (FOM) maps. It represents the cross-correlation coefficient between each template particle image and all selected positions in the micrographs. We can make computations faster if we write FOM on disk and read it on next iterations. You can control FOM related behavior of RELION by using "Write FOM maps?" and "Read FOM maps?" fields.
 
 Here are the parameters that we need to optimize:
 
@@ -85,7 +85,7 @@ Running the manual picking job will overwrite default parameters for "RELION dis
 
 Once you have found the perfect set of parameters - you can proceed to the next step.
 
-**NOTE**: Initial running with FOM map writing could take much time. It's because writing a FOM map is very expansive for computational resources, and RELION cannot make it in parallel.
+**NOTE**: Initial running with FOM map writing could take much time. It's because writing a FOM map is very expensive for computational resources, and RELION cannot make it in parallel.
 
 
 ## Step 11/29 - Template Based Auto-Picking
@@ -133,9 +133,9 @@ Write FOM maps? | `No`
 Read FOM maps? | `No`
 Shrink factor | `0`
 
-Once done, check `coords_suffix_autopick.star` file and you can see that all micrographs contain picks of particles.
+Once done, check `coords_suffix_autopick.star` file and you will see that all micrographs contain selections of particles.
 
-If you are not satisfied with the result, you may manually pick/unpick selections.
+If you are not satisfied with the result, you may manually pick/unpick particular selections.
 
 * Left button click - pick a particle.
 * Middle button click - unpick a particle.

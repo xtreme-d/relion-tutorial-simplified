@@ -38,7 +38,7 @@ Perform particle polishing? | `No`
 
 The optimal parameters will be stored in `Polish/train/opt_params.txt` once the job is done.
 
-**Links**
+**References**
 
 * [A Bayesian approach to beam-induced motion correction in cryo-EM single-particle analysis]
 
@@ -160,7 +160,7 @@ Tutorial Unit | 9 Local-resolution estimation
 Previous Step | *(27) Refine3D/polished*
 Step Alias | **(29) LocalRes/polished**
 
-At the final step of the tutorial, we are going to perform the local-resolution estimation. RELION provides the application that can estimate local variations in the resolution of the model what is opposite to global estimate in post-processing. It will help us to differentiate the noise from the final model.
+At the final step of the tutorial, we are going to perform the local-resolution estimation. RELION provides the application that can estimate local variations in the model resolution that is the opposite to global estimation in post-processing step. It will help us to differentiate the noise from the final model.
 
 Field name | Field value
 --- | ---

@@ -12,7 +12,7 @@ Along with RELION, you might need the [UCSF Chimera] application that designed f
 
 You can provide fine-tuning for RELION by setting the specific environment variables. The RELION developers provide [the sample RC script] for this purpose. You can override desired settings in your user's `.bashrc` file or manually execute it (`source /path/to/relion_rc_script_file.sh`) before you run RELION.
 
-Also, RELION can run jobs in parallel, but you need an MPI library installed. Also, it’s recommended to use the job scheduler to submit MPI jobs. The recommended combo: [Open MPI 2.1.6+] and [SLURM 18.08.3+].
+RELION can run jobs in parallel, but you need an MPI library installed. Also, it’s recommended to use the job scheduler to submit MPI jobs. The recommended combo: [Open MPI 2.1.6+] and [SLURM 18.08.3+].
 
 **NOTE**: RELION works faster if you are using GPU. The original tutorial describes it in details. But in this simplified tutorial, we are going to provide examples based on jobs executed on CPU only.
 
@@ -43,7 +43,7 @@ export RELION_QSUB_TEMPLATE=/home/user/relion/slurm_relion.sh
 export RELION_QSUB_EXTRA_COUNT=1
 export RELION_QSUB_EXTRA1=Partition
 export RELION_QSUB_EXTRA1_DEFAULT=my_partition
-export RELION_QSUB_EXTRA1_HELP=Partition
+export RELION_QSUB_EXTRA1_HELP="Slurm Partition"
 
 # The mpi runtime ('mpirun' by default)
 export RELION_MPI_RUN=srun

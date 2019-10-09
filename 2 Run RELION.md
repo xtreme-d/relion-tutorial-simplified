@@ -30,7 +30,7 @@ Open X console and connect to the cluster via SSH with X11 forwarding enabled (-
 ssh yury@10.0.0.1 -X
 ```
 
-When connection established, `cd` to the working directory and run RELION.
+When connected, go to the working directory and run RELION.
 
 ```bash
 cd relion30_tutorial
@@ -58,7 +58,7 @@ vncserver -geometry 1600x1200 :3
 
 The `-geometry` parameter sets the desktop resolution; make sure the height of the screen is greater than or equal to `1200` pixels because the RELION GUI window is not scalable and will be cut on the small screen.
 
-The last positional argument `:3` means that we are going to allocate desktop with number `3`, and, according to the default VNC server conventions, the port to connect to this virtual remote desktop will be `5903`. Of course, you can use any number you want instead.
+The last positional argument `:3` means that we are going to allocate desktop with number `3`, and, according to the default VNC server conventions, the port to connect to this virtual remote desktop will be `5903` (`59<number_of_desktop>`), . Of course, you can use any number you want instead.
 
 Next, we need to establish an SSH tunnel between the local machine and VNC server port we bound on the remote server.
 
@@ -68,7 +68,7 @@ ssh -L 5903:10.0.0.1:5903 -N yury@10.0.0.1
 # HINT: Additionally, you can specify the `-f` flag to run the corresponding SSH process in the background.
 ```
 
-Finally, on the local machine, open your VNC client and connect to `localhost:5903`. The Linux desktop will appear.
+Finally, on the local machine, open your VNC client and connect to `localhost:5903` and the Linux desktop will appear.
 
 Now we are ready for the RELION. Open the terminal application in the Linux desktop, switch to the working directory and run relion app.
 

@@ -11,9 +11,9 @@ The visualization of the tutorial workflow represented below.
 
 ![images/relion_tutorial_workflow.png](images/relion_tutorial_workflow.png)
 
-* Solid arrows show explicit data interconnectivity between steps. For example, the output data of the arrow's source step is the input data of the arrow's target step.
-* Bold solid arrows represents a transition between step chapters.
-* Dashed arrows show implicit data interconnectivity between steps. For example, parameters calculated during the arrow's source step become input values for the arrow's target step.
+* Solid arrows show explicit data interconnectivity between steps. For example, the output data of the `CtfFind/ctffind` is the input data of the `Extract/LoG_based`.
+* Bold solid and dashed arrows represents a transition between step chapters.
+* Dashed arrows show implicit data interconnectivity between steps. For example, parameters calculated during the `AutoPick/optimize_params` step become input values for the `AutoPick/template_based` step.
 * The first and the last steps marked with the purple color.
 
 
@@ -48,37 +48,37 @@ Remember that each step represents a single job only. At some steps, you also ne
 
 Some job types support parallel execution via [message passing interface, or MPI]. The table below describes the relation of each tutorial step to the MPI and how long a particular job running.
 
- N |  Name                       | Uses MPI | Running time
--- | --------------------------------- | ----- | ---------
- 1 | `Import/movies`                   | No    | instantly
- 2 | `MotionCorr/own`                  | No    | **fast**
- 3 | `CtfFind/ctffind`                 | `Yes` | **fast**
- 4 | `ManualPick/illustrate_only`      | No    | instantly
- 5 | `Select/5mics`                    | No    | instantly
- 6 | `AutoPick/LoG_based`              | `Yes` | **fast**
- 7 | `Extract/LoG_based`               | `Yes` | **fast**
- 8 | `Class2D/LoG_based`               | `Yes` | *slow*
- 9 | `Select/template4autopick`        | No    | instantly
-10 | `AutoPick/optimize_params`        | `Yes` | *slow*
-11 | `AutoPick/template_based`         | `Yes` | average
-12 | `Extract/template_based`          | `Yes` | average
-13 | `Sort/after_autopick`             | No    | **fast**
-14 | `Select/after_sort`               | No    | instantly
-15 | `Class2D/after_sorting`           | `Yes` | *slow*
-16 | `Select/class2d_aftersort`        | No    | instantly
-17 | `InitialModel/symC1`              | `Yes` | **fast**
-18 | `Class3D/first_exhaustive`        | `Yes` | *slow*
-19 | `Select/class3d_first_exhaustive` | No    | instantly
-20 | `Extract/best3dclass_bigbox`      | `Yes` | average
-21 | `Refine/first3dref`               | `Yes` | *slow*
-22 | `MaskCreate/first3dref`           | `Yes` | **fast**
-23 | `PostProcess/first3dref`          | No    | **fast**
-24 | `CtfRefine/ctfrefine`             | `Yes` | **fast**
-25 | `Polish/train`                    | No    | *slow*
-26 | `Polish/polish`                   | No    | *slow*
-27 | `Refine3D/polished`               | `Yes` | *slow*
-28 | `PostProcess/polished`            | No    | **fast**
-29 | `LocalRes/polished`               | No    | **fast**
+ N |  Name                         | Uses MPI | Running time
+-- | --------------------------------- | ------- | ---------
+ 1 | `Import/movies`                   | No      | instantly
+ 2 | `MotionCorr/own`                  | No      | **fast**
+ 3 | `CtfFind/ctffind`                 | **Yes** | **fast**
+ 4 | `ManualPick/illustrate_only`      | No      | instantly
+ 5 | `Select/5mics`                    | No      | instantly
+ 6 | `AutoPick/LoG_based`              | **Yes** | **fast**
+ 7 | `Extract/LoG_based`               | **Yes** | **fast**
+ 8 | `Class2D/LoG_based`               | **Yes** | *slow*
+ 9 | `Select/template4autopick`        | No      | instantly
+10 | `AutoPick/optimize_params`        | **Yes** | *slow*
+11 | `AutoPick/template_based`         | **Yes** | average
+12 | `Extract/template_based`          | **Yes** | average
+13 | `Sort/after_autopick`             | No      | **fast**
+14 | `Select/after_sort`               | No      | instantly
+15 | `Class2D/after_sorting`           | **Yes** | *slow*
+16 | `Select/class2d_aftersort`        | No      | instantly
+17 | `InitialModel/symC1`              | **Yes** | **fast**
+18 | `Class3D/first_exhaustive`        | **Yes** | *slow*
+19 | `Select/class3d_first_exhaustive` | No      | instantly
+20 | `Extract/best3dclass_bigbox`      | **Yes** | average
+21 | `Refine/first3dref`               | **Yes** | *slow*
+22 | `MaskCreate/first3dref`           | **Yes** | **fast**
+23 | `PostProcess/first3dref`          | No      | **fast**
+24 | `CtfRefine/ctfrefine`             | **Yes** | **fast**
+25 | `Polish/train`                    | No      | *slow*
+26 | `Polish/polish`                   | No      | *slow*
+27 | `Refine3D/polished`               | **Yes** | *slow*
+28 | `PostProcess/polished`            | No      | **fast**
+29 | `LocalRes/polished`               | No      | **fast**
 
 Note that:
 

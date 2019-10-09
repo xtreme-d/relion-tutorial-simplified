@@ -18,7 +18,7 @@ Note that the output of some of RELION GUI components depends on the currently s
 
 ## Job Types
 
-RELION providing a variety of job types required for model building. Some job types are running instantly; others need time for running and could be executed in parallel (See "Relion Tutorial / MPI" section for details).
+RELION provides a variety of job types required for model building. Some job types are running instantly; others need time for running and could be executed in parallel (See "Relion Tutorial / MPI" section for details).
 
 * **Import.** Builds a pipeline STAR file from micrograph images.
 * **Motion correction.** Fix position of particles distorted due to motion during the photography process.
@@ -27,12 +27,12 @@ RELION providing a variety of job types required for model building. Some job ty
 * **Auto-picking.** Automatic search of coordinates of particles on micrograph images using a specific algorithm.
 * **Particle extraction.** Cut particle images using coordinates from manual or auto picking.
 * **Particle sorting.** Sort extracted images by a specific value of each particle. This job type needed to separate “good” and “bad” particle images.
-* **Subset selection.**Select a subset of micrographs or particles from an input set.
+* **Subset selection.** Select a subset of micrographs or particles from an input set.
 * **2D classification.** Process extracted particle images and create 2D classes from similar images.
 * **3D initial model.** Build an initial 3D model reference from a set of 2D classes.
 * **3D classification.** Build a 3D model using 3D model reference and a set of 2D classes.
 * **3D auto-refine.** Refine a 3D model by Fourier shell correlation method.
-* **3D multi-body.** [Not used in the tutorial] Refine a 3D model by the iterative alignment of independently moving rigid bodies of a particle.
+* **3D multi-body.** *[Not used in the tutorial]* Refine a 3D model by the iterative alignment of independently moving rigid bodies of a particle.
 * **CTF refinement.** Estimate the defocus and beam tilt values for input particles.
 * **Bayesian polishing.** Polish particle with Bayesian beam-induced motion correction.
 * **Mask creation.** Create a mask of a particle, a “cover” that covers a 3D model of particle and represents a “border” of it.

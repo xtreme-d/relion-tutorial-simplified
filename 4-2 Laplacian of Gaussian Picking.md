@@ -228,7 +228,7 @@ $ relion_display --i Class2D/LoG_based/run_it025_classes.mrcs &
 
 The classification is computational intensive action, and it takes time for running.
 
-**Links**
+**References**
 
 1. [Relion 2D classification (Maximum likelihood)]
 
