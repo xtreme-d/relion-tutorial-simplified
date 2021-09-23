@@ -9,6 +9,33 @@ With RELION, you can build a 3D model of a particle from a set of the 2D micro-p
 
 The tutorial contains a simplified description of each step of the original tutorial, recommendations about how to get the best results, and explanation of results. Also, it includes links to additional references for cryo-EM terms like beam-induced motion-correction, CTF estimation, Bayesian polishing, and others.
 
+
+## Parameters
+
+The values for RELION parameters from the original tutorial were taken as the base. Still, at some steps values may be different from the values of the original tutorial.
+
+
+## Cluster specs
+
+We used the HPC cluster with the following specs for computations.
+
+- CPU: Intel Xeon Gold 6230 Cascadelake (2.1GHz, 20Cores) x2
+- Cores: 640
+- MEM/node: 192GB
+- Total Memory: 4.6TB
+- GPU: N/A
+- Number of Compute nodes: 16
+- Interconnect: Intel Omni-Path 100Gbps
+- File system: BeeGFS
+
+
+## Sources
+
+- [The RELION 3.0 tutorial for single particle analysis](https://bit.ly/2mgzoQA)
+- [The tutorial made by Yasunaga Lab of Kyushu Institute of Technology (Japanese)](https://www.yasunaga-lab.bio.kyutech.ac.jp/EosJ/index.php/RELION3%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
+- [Materials of the 2nd Cryo-EM Analysis Beginner Workshop held by The High Energy Accelerator Research Organization at Tsukuba City (Japanese)](https://www.cryoemnet.org/sbrc-cryoem-workshop-2nd)
+
+
 ## Table of Contents
 
 * [Install RELION]
